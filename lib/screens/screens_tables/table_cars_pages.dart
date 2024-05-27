@@ -14,8 +14,6 @@ class TableCars extends StatefulWidget {
 
 class _TableCarsState extends State<TableCars> {
   late String token;
-  List<String> originalData = [];
-  List<String> filteredData = [];
 
   SharedPreferences? prefs;
 
@@ -49,15 +47,6 @@ class _TableCarsState extends State<TableCars> {
     } else {
       throw Exception('Failed to load data');
     }
-  }
-
-  @override
-  void filterData(String query) {
-    setState(() {
-      filteredData = originalData
-          .where((item) => item.toLowerCase().contains(query.toLowerCase()))
-          .toList();
-    });
   }
 
   @override
