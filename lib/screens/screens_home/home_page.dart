@@ -1,6 +1,6 @@
 import 'package:cars_app_new/components/categore.dart';
-import 'package:cars_app_new/screens/branches_home_page.dart';
-import 'package:cars_app_new/screens/cars_home_page.dart';
+import 'package:cars_app_new/screens/screens_home/branches_home_page.dart';
+import 'package:cars_app_new/screens/screens_home/cars_home_page.dart';
 import 'package:cars_app_new/screens/loginscreen_page.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';

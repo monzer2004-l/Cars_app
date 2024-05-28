@@ -2,7 +2,7 @@ import 'package:cars_app_new/components/categore.dart';
 import 'package:cars_app_new/screens/screens_tables/table_emp_page.dart';
 import 'package:flutter/material.dart';
 
-import 'Screens_incsert/insert_emp.dart';
+import '../Screens_incsert/insert_emp.dart';
 
 class EmployeeHomePage extends StatelessWidget {
   const EmployeeHomePage({super.key});
