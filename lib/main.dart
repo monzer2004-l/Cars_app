@@ -1,6 +1,6 @@
-import 'package:cars_app_new/screens/Screens_incsert/edit_branches.dart';
-import 'package:cars_app_new/screens/Screens_incsert/edit_cars.dart';
-import 'package:cars_app_new/screens/Screens_incsert/edit_emp.dart';
+import 'package:cars_app_new/screens/screens_edit/edit_branches.dart';
+import 'package:cars_app_new/screens/screens_edit/edit_cars.dart';
+import 'package:cars_app_new/screens/screens_edit/edit_emp.dart';
 import 'package:cars_app_new/screens/loginscreen_page.dart';
 import 'package:flutter/material.dart';
 
