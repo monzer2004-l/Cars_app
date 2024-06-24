@@ -63,19 +63,7 @@ class _TableEmployeesState extends State<TableEmployees> {
           ),
         ),
         elevation: 2,
-        flexibleSpace: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Colors.red,
-                Colors.blue,
-                Colors.green
-              ], // استخدم الألوان التي تختارها
-            ),
-          ),
-        ),
+        backgroundColor: Color(0xff0D47A1),
       ),
       body: FutureBuilder<List<dynamic>>(
         future: fetchEmployee(),

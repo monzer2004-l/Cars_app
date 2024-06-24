@@ -37,19 +37,7 @@ class _BranchesHomePageState extends State<BranchesHomePage> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 20,
-        flexibleSpace: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Colors.red,
-                Colors.blue,
-                Colors.green
-              ], // استخدم الألوان التي تختارها
-            ),
-          ),
-        ),
+        backgroundColor: Color(0xff0D47A1),
         title: const Text('Branches'),
       ),
       body: SafeArea(

@@ -58,19 +58,7 @@ class _TableBranchesState extends State<TableBranches> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        flexibleSpace: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Colors.red,
-                Colors.blue,
-                Colors.green
-              ], // استخدم الألوان التي تختارها
-            ),
-          ),
-        ),
+        backgroundColor: Color(0xff0D47A1),
         title: const Text(
           'Information About Branches',
           style: TextStyle(
@@ -78,7 +66,7 @@ class _TableBranchesState extends State<TableBranches> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        backgroundColor: Colors.blue,
+        
       ),
       body: FutureBuilder<List<dynamic>>(
         future: fetchBranches(),
