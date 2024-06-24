@@ -61,7 +61,7 @@ class _TableCarsState extends State<TableCars> {
           ),
         ),
         elevation: 20,
-      backgroundColor: Color(0xff0D47A1),
+        backgroundColor: Color(0xff0D47A1),
       ),
       body: FutureBuilder<List<dynamic>>(
         future: fetchCars(),
@@ -113,6 +113,14 @@ class _TableCarsState extends State<TableCars> {
                     DataColumn(
                         label: Text(
                       'Branches',
+                      style: TextStyle(
+                          color: Colors.blue,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 17),
+                    )),
+                    DataColumn(
+                        label: Text(
+                      'Owner Phone',
                       style: TextStyle(
                           color: Colors.blue,
                           fontWeight: FontWeight.bold,
@@ -229,6 +237,12 @@ class _TableCarsState extends State<TableCars> {
                                         fontWeight: FontWeight.bold),
                                   ),
                                 ),
+                                DataCell(Text(
+                                  car['owner_phone'][0],
+                                  style: const TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold),
+                                )),
                               ]))
                       .toList()),
             );

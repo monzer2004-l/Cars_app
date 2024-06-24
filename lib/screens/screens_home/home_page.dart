@@ -92,9 +92,20 @@ class HomePage extends StatelessWidget {
                 );
               },
             ),
-            const SizedBox(
-              width: 20,
-            )
+            Categoer(
+              text: 'Users',
+              color: Colors.white,
+              OnTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) {
+                      return const CarsHomePage();
+                    },
+                  ),
+                );
+              },
+            ),
           ],
         ),
       ),
