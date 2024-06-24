@@ -83,19 +83,7 @@ class _InsertCarsState extends State<EditCars> {
     }
     return Scaffold(
       appBar: AppBar(
-        flexibleSpace: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Colors.red,
-                Colors.blue,
-                Colors.green
-              ], // استخدم الألوان التي تختارها
-            ),
-          ),
-        ),
+        backgroundColor: Color(0xff0D47A1),
         title: const Text(
           'Edit Car',
           style: TextStyle(color: Colors.white),

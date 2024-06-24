@@ -56,19 +56,7 @@ class _InsertBranchesState extends State<InsertBranches> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        flexibleSpace: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Colors.red,
-                Colors.blue,
-                Colors.green
-              ], // استخدم الألوان التي تختارها
-            ),
-          ),
-        ),
+        backgroundColor: Color(0xff0D47A1),
         title: const Text(
           'Insert Branch',
           style: TextStyle(color: Colors.white),
