@@ -2,6 +2,7 @@ import 'package:cars_app_new/components/categore.dart';
 import 'package:cars_app_new/screens/screens_home/branches_home_page.dart';
 import 'package:cars_app_new/screens/screens_home/cars_home_page.dart';
 import 'package:cars_app_new/screens/loginscreen_page.dart';
+import 'package:cars_app_new/screens/screens_home/users_home.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -100,7 +101,7 @@ class HomePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (BuildContext context) {
-                      return const CarsHomePage();
+                      return const UsersHomePage();
                     },
                   ),
                 );

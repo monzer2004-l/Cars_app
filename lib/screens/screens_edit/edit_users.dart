@@ -6,14 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
-class InsertUsers extends StatefulWidget {
-  const InsertUsers({super.key});
+class EditUser extends StatefulWidget {
+  const EditUser({super.key});
 
   @override
-  State<InsertUsers> createState() => _InsertUsersState();
+  State<EditUser> createState() => _EditUserState();
 }
 
-class _InsertUsersState extends State<InsertUsers> {
+class _EditUserState extends State<EditUser> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
@@ -31,7 +31,7 @@ class _InsertUsersState extends State<InsertUsers> {
 
   Future<bool> insert() async {
     final response = await http.post(
-      Uri.parse('https://somar-jaber.serv00.net/api/users'),
+      Uri.parse('https://somar-jaber.serv00.net/api/users/id'),
       headers: <String, String>{
         'Content-Type': 'application/json',
         'accept': 'application/json',
@@ -102,11 +102,25 @@ class _InsertUsersState extends State<InsertUsers> {
 
   @override
   Widget build(BuildContext context) {
+    final arguments = ModalRoute.of(context)?.settings.arguments as Map;
+
+    if (nameController.text.isEmpty) {
+      nameController.text = arguments['name'].toString();
+    }
+
+    if (passwordController.text.isEmpty) {
+      passwordController.text = arguments['password'].toString();
+    }
+
+    if (emailController.text.isEmpty) {
+      emailController.text = arguments['email'].toString();
+    }
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xff0D47A1),
         title: const Text(
-          'Insert User',
+          'Edit User',
           style: TextStyle(color: Colors.white),
         ),
       ),
@@ -220,7 +234,7 @@ class _InsertUsersState extends State<InsertUsers> {
                       }
                     }
                   },
-                  child: const Text('Insert User'),
+                  child: const Text('Edit User'),
                 )
               ],
             ),
